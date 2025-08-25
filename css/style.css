@@ -1,0 +1,28 @@
+/* ฟอนต์หลักของเว็บไซต์ */
+body, h1, h2, h3, h4, h5, p {
+    font-family: "Raleway", sans-serif;
+}
+
+/* พื้นหลังส่วน About Me เป็นสีชมพูอ่อน และตัวหนังสือสีเข้ม */
+#about {
+    background-color: #ffe6f0; /* ชมพูอ่อน */
+    color: #800040; /* ตัวหนังสือสีเข้มเพื่ออ่านง่าย */
+    font-weight: 600; /* ตัวหนังสือหนา */
+}
+
+/* สไตล์สำหรับภาพในคอลัมน์ w3-third */
+.w3-third img {
+    margin-bottom: -6px;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+/* เอฟเฟกต์ hover เมื่อเมาส์ชี้ภาพ */
+.w3-third img:hover {
+    opacity: 1;
+}
+
+/* ปรับสีพื้นหลังส่วนอื่นๆ ให้เข้ากับโทนชมพู-ขาว */
+body {
+    background-color: #fff0f5; /* สีชมพูอ่อนอ่อนทั่วหน้า */
+}
