@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>W3.CSS Template</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <link rel="stylesheet" href="style.css"> <!-- เชื่อมกับไฟล์ CSS ภายนอก -->
+        </head>
+        
+        <body class="w3-content" style="max-width:1600px">
+
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center" style="z-index:3;width:300px;font-weight:bold" id="mySidebar"><br>
+  <h3 class="w3-padding-64 w3-center"><b>Nahathai<br>Boonrod</b></h3>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hide-large">CLOSE</a>
+  <a href="#" onclick="w3_close()" class="w3-bar-item w3-button">MY PROFILE</a> 
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT ME</a> 
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT </a>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-white w3-xlarge w3-padding-16">
+  <span class="w3-left w3-padding">Nahathai Boonrod</span>
+  <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px">
+
+  <!-- Push down content on small screens --> 
+  <div class="w3-hide-large" style="margin-top:83px"></div>
+  
+  <!-- Photo grid -->
+  <div class="w3-row">
+    <div class="w3-third">
+      <img src="C:\Users\fluke\Desktop\w2hw2_1680705876_ณหทัย บุญรอด\asset\S__15261698.jpg" style="width:100%" onclick="onClick(this)" alt="My favorite cafe filled with flowers">
+      <img src="C:\Users\fluke\Desktop\w2hw2_1680705876_ณหทัย บุญรอด\asset\S__15261700.jpg" style="width:100%" onclick="onClick(this)" alt="Beloved bag">
+      <img src="C:\Users\fluke\Desktop\w2hw2_1680705876_ณหทัย บุญรอด\asset\S__15261702.jpg" style="width:100%" onclick="onClick(this)" alt="When I have free time, I build flower legos.">
+    </div>
+
+    <div class="w3-third">
+      <img src="C:\Users\fluke\Desktop\w2hw2_1680705876_ณหทัย บุญรอด\asset\S__15261703.jpg" style="width:100%" onclick="onClick(this)" alt="Delicious pasta">
+      <img src="C:\Users\fluke\Desktop\w2hw2_1680705876_ณหทัย บุญรอด\asset\S__15261701.jpg" style="width:100%" onclick="onClick(this)" alt="Another flower cafe
+      ">
+      <img src="C:\Users\fluke\Desktop\w2hw2_1680705876_ณหทัย บุญรอด\asset\S__15261704.jpg" style="width:100%" onclick="onClick(this)" alt="Christmas is the best festival.">
+    </div>
+    
+    <div class="w3-third">
+      <img src="C:\Users\fluke\Desktop\w2hw2_1680705876_ณหทัย บุญรอด\asset\S__15261707.jpg" style="width:100%" onclick="onClick(this)" alt="Cuties duck on the beach">
+      <img src="C:\Users\fluke\Desktop\w2hw2_1680705876_ณหทัย บุญรอด\asset\S__15261706.jpg" style="width:100%" onclick="onClick(this)" alt="Pasta again!">
+      <img src="C:\Users\fluke\Desktop\w2hw2_1680705876_ณหทัย บุญรอด\asset\S__15261705.jpg" style="width:100%" onclick="onClick(this)" alt="My holidays">
+    </div>
+  </div>
+
+  <!-- Pagination -->
+  <div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
+      <a href="#" class="w3-bar-item w3-black w3-button">1</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
+    </div>
+  </div>
+  
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  <!-- About section -->
+  <div class="w3-container w3-center w3-padding-32" id="about" style="background-color:#ffe6f0; color:#333333;">
+
+    <h4><b>About Me</b></h4>
+    <img src="C:\Users\fluke\Desktop\w2hw2_1680705876_ณหทัย บุญรอด\asset\S__15261701.jpg" alt="Me" class="w3-image w3-padding-32" width="600" height="650">
+    <div class="w3-content w3-justify" style="max-width:600px">
+      <h4><b>Nahathai Boonrod</b></h4>
+      <p>สวัสดีค่าา 🙋🏻‍♀️
+        ฉันชื่อนางสาวณหทัย บุญรอด ชื่อเล่น ฟลุค ตอนนี้กำลังเรียนอยู่ที่ คณะเทคโนโลนีสารสนเทศและนวัตกรรม ชั้นปีที่ 1 มหาวิทยาลัยกรุงเทพ 💻📚
+        
+        ในวันหยุด สิ่งที่ชอบทำที่สุดก็คือการไปนั่งเล่นตามคาเฟ่ ☕🍰 เพราะนอกจากจะได้กินของอร่อย ๆ แล้ว ก็ยังได้ถ่ายรูปตัวเองรวมถึงบรรยากาศสวย ๆ เก็บไว้ด้วย บางครั้งก็ชอบไปหาร้านอาหารใหม่ๆกิน✨
+        
+        นอกจากคาเฟ่กับไปหาของกินใหม่ๆแล้ว ก็ยังชอบไปวัดในบางวันด้วย เพราะเชื่อว่าจะมีแต่ความสุขในชีวิต💖
+      </p>
+      <p><b>Email:</b> nahathai.boonr@bumail.net</p>
+      <p><b>Tel:</b> 098-913-1789</p>
+      <hr class="w3-opacity">
+      <h4 class="w3-padding-16"><b>สกิลต่างๆ</b></h4>
+      <p class="w3-wide">การออกแบบเว็ป</p>
+      <div class="w3-white">
+        <div class="w3-container w3-padding-small w3-center w3-grey" style="width:65%">65%</div>
+      </div>
+      <p class="w3-wide">การเขียนโค้ด</p>
+      <div class="w3-white">
+        <div class="w3-container w3-padding-small w3-center w3-grey" style="width:55%">55%</div>
+      </div>
+      <p class="w3-wide">การถ่ายรูป</p>
+      <div class="w3-white">
+        <div class="w3-container w3-padding-small w3-center w3-grey" style="width:75%">75%</div>
+      </div>
+      
+
+      <div class="w3-row-padding" style="margin:0 -16px">
+        
+        
+        <div class="w3-half">
+         
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact section -->
+  <div class="w3-container w3-light-grey w3-padding-32 w3-padding-large" id="contact">
+    <div class="w3-content" style="max-width:600px">
+      <h4 class="w3-center"><b>Contact Me</b></h4>
+      <p><b>ติดต่อได้ตามช่องทางด้านล่างเลยค่ะ :) </b></p>
+      <form action="/action_page.php" target="_blank">
+        <div class="w3-section">
+          <label><b>Email :</b> nahathai.boonr@bumail.net</label>
+          
+        </div>
+        <div class="w3-section">
+          <label><b>Facebook :</b> Fluke Nahathai</label>
+          
+        </div>
+        <div class="w3-section">
+          <label><b>Lind ID :</b> flukeficsff</label>
+          
+        </div>
+        <div class="w3-section">
+            <label><b>Tel :</b> 098-913-1789</label>
+            
+        </div>
+        
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-32 footer">
+    <div class="w3-row-padding">
+      <div class="w3-third">
+        <h3><b>INFO</b></h3>
+        <p>สวัสดีค่ะ 🙋🏻‍♀️ ยินดีต้อนรับสู่พื้นที่เล็ก ๆ ของเรา  
+            สำหรับแชร์ภาพถ่าย บันทึกเรื่องราวต่างๆ และสิ่งที่เราชอบ 💖  
+            โดยเฉพาะการไปคาเฟ่ ถ่ายรูปบรรยากาศน่ารัก ๆ ☕📸  
+            ขอบคุณที่แวะเข้ามาชมผลงานนะคะ</p>      
+      </div>
+    
+      <div class="w3-third">
+        <h3><b>Follow Me!</b></h3>
+        <ul class="w3-ul">
+          <li class="w3-padding-16 w3-hover-black">
+            <a href="https://www.instagram.com/flukefic/" target="_blank">
+              <img src="C:\Users\fluke\Desktop\w2hw2_1680705876_ณหทัย บุญรอด\asset\493991600_18497043472014170_1944369660588947465_n.jpg" class="w3-left w3-margin-right" style="width:50px">
+            </a>
+            <span class="w3-large">Instagram</span><br>
+            <span>☕🌞</span>
+          </li>
+          <li class="w3-padding-16 w3-hover-black">
+            <a href="https://www.facebook.com/fluke.nahathai/" target="_blank">
+              <img src="C:\Users\fluke\Desktop\w2hw2_1680705876_ณหทัย บุญรอด\asset\452393659_7620108071452253_6025687385925504326_n.jpg" class="w3-left w3-margin-right" style="width:50px">
+            </a>
+            <span class="w3-large">Facebook</span><br>
+            <span> 🏙️📸</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="w3-third">
+        <h3><b>POPULAR TAGS</b></h3>
+        <p>
+          <span class="w3-tag w3-pink w3-margin-bottom">Cafe</span> <span class="w3-tag w3-pink w3-small w3-margin-bottom">Cafe Shots</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Thailand</span>
+          <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">University</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Lifestyle</span> <span class="w3-tag w3-pink w3-small w3-margin-bottom">Daily Life</span>
+          <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Vacation</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Diary</span> <span class="w3-tag w3-pink w3-small w3-margin-bottom">Food</span>
+          <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Memories</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Clothing</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Shopping</span>
+          <span class="w3-tag w3-pink w3-small w3-margin-bottom">Vibes</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Ideas</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+  
+  <div class="w3-pink w3-center w3-padding-24">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></div>
+
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+</script>
+
+
+</body>
+</html>
